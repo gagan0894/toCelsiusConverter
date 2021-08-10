@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Temperature Converter</title>
+   <!-- <link href="styles.css" rel="stylesheet">-->
+    <link th:href="@{/styles/styles.css}" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script type="text/javascript" th:src="@{/js/main.js}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="card">
+    <div class="card-header">Unit Converter</div>
+</div>
+<div class="card card-converter">
+    <div class="card-header">Temperature to Celsius Converter</div>
+    <div class="card-body">
+        <div class="input-group mb-3">
+            <input id="temperatureInput" type="text" class="form-control" style="width: 60%;">
+            <select id="toUnit" class="form-select" aria-label="Default select example">
+                <option value="Farenheit" selected>Farenheit</option>
+                <option value="Kelvin">Kelvin</option>
+            </select>
+        </div>
+        <a id="convert" class="btn btn-primary" th:onclick="convert()">Convert</a>
+        <p id="result" class="margin-40px fs-2" >
+            0
+         </p>
+        <p class="text-muted">Celsius</p>
+    </div>
+</div>
+</body>
+</html>
